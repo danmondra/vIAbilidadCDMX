@@ -1,0 +1,25 @@
+# ViableCDMX Bot - Dependencias Python
+# Instalar con: pip install -r requirements.txt
+
+# Telegram Bot Framework
+python-telegram-bot==22.0
+
+# Web API
+fastapi>=0.100.0
+uvicorn>=0.20.0
+
+# Database ORM
+SQLAlchemy>=2.0.0
+
+# Inteligencia Artificial (Anthropic Claude)
+anthropic>=0.40.0
+
+# Variables de entorno
+python-dotenv>=1.0.0
+
+# Fuzzy matching para clasificacion de giros
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0
+
+# Utilidades opcionales
+requests>=2.31.0
