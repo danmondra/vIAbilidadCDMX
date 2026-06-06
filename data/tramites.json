@@ -1,0 +1,529 @@
+{
+  "bajo": {
+    "impacto": "Bajo Impacto",
+    "fundamento_principal": "Art. 35 LEM CDMX",
+    "formato_siapem": "EM-03",
+    "advertencia": "Giros de bajo impacto solo requieren Aviso de Funcionamiento (EM-03) en SIAPEM. No se requiere autorizacion previa de la Alcaldia ni pago de derechos por la operacion mercantil.",
+    "fases": {
+      "fase0": {
+        "titulo": "Fase 0 - Preparacion",
+        "descripcion": "Acciones previas al tramite: constitucion fiscal, local, documentacion base.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Constituir RFC ante el SAT",
+            "descripcion": "Inscribirte en el RFC como persona fisica o moral con actividad empresarial en el giro que vas a operar. Necesitas e.firma (firma electronica) vigente para emitir comprobantes fiscales.",
+            "link": "https://www.sat.gob.mx/tramites/16703/obten-tu-constancia-de-situacion-fiscal",
+            "link_info": "https://www.sat.gob.mx/personas/inscripcion-en-el-rfc",
+            "costo": "Gratuito",
+            "plazo": "1-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 CFF; Regla 2.4.1. RMF"
+          },
+          {
+            "paso": 2,
+            "nombre": "Firma de contrato de arrendamiento del local",
+            "descripcion": "Celebrar y registrar ante Tesoreria CDMX (en su caso) el contrato de arrendamiento del local comercial. Es indispensable para acreditar el domicilio del establecimiento ante SIAPEM.",
+            "link": "",
+            "link_info": "https://www.finanzas.cdmx.gob.mx/",
+            "costo": "Variable (renta + deposito)",
+            "plazo": "1-3 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 35 LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Alta patronal en IMSS (si tienes empleados)",
+            "descripcion": "Si vas a contratar trabajadores, inscribir el negocio como patron ante el IMSS y registrar a los trabajadores. Requiere Numero de Patronal y envio de movimientos afiliatorios.",
+            "link": "https://www.imss.gob.mx/personas/trabajadores",
+            "link_info": "https://www.gob.mx/tramites/ficha/alta-patronal/IMSS5148",
+            "costo": "Gratuito (cuotas obrero-patronales mensuales)",
+            "plazo": "1-2 dias habiles",
+            "obligatorio": false,
+            "condicion": "Si contratas empleados",
+            "fundamento": "Ley del Seguro Social, arts. 12 y 15"
+          }
+        ]
+      },
+      "fase1": {
+        "titulo": "Fase 1 - Prerrequisitos obligatorios",
+        "descripcion": "Tramites indispensables antes de registrar el aviso en SIAPEM.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Crear cuenta Llave CDMX",
+            "descripcion": "Crear tu identidad digital unica de la CDMX. Es obligatoria para acceder al SIAPEM, RETYS y todos los tramites electronicos del Gobierno de la Ciudad de Mexico.",
+            "link": "https://llave.cdmx.gob.mx/",
+            "link_info": "https://llave.cdmx.gob.mx/ayuda",
+            "costo": "Gratuito",
+            "plazo": "1 dia habil (alta inmediata)",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Decreto por el que se crea la Plataforma Llave CDMX"
+          },
+          {
+            "paso": 2,
+            "nombre": "Obtener Certificado Unico de Zonificacion de Uso de Suelo (CUS SEDUVI)",
+            "descripcion": "Solicitar el CUS vigente (maximo un ano de expedicion) que señale expresamente que el giro mercantil esta permitido en el domicilio del local. Se tramita en linea ante SEDUVI.",
+            "link": "http://certificadodigital.cdmx.gob.mx:8080/CertificadoDigital/certificado/solicitaCertificado",
+            "link_info": "https://www.cdmx.gob.mx/public/InformacionTramite.xhtml?idTramite=806",
+            "costo": "$2,078 MXN (uma-based)",
+            "plazo": "10-15 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 35 LEM CDMX; Reglamento de Construcciones CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Programa Interno de Proteccion Civil (PIPC)",
+            "descripcion": "Elaborar y registrar el Programa Interno de Proteccion Civil ante la Alcaldia correspondiente. Requiere visto bueno de un Tercero Acreditado. Es exento unicamente si aforo < 100 personas Y superficie <= 250 m2.",
+            "link": "https://www.proteccioncivil.cdmx.gob.mx/",
+            "link_info": "https://www.proteccioncivil.cdmx.gob.mx/programa-interno",
+            "costo": "$3,500 - $8,000 MXN (Tercer Acreditado) + $1,200 MXN (registro)",
+            "plazo": "10-20 dias habiles",
+            "obligatorio": true,
+            "condicion": "Aforo >= 100 personas O superficie > 250 m2",
+            "fundamento": "Art. 10 apartado A fracc. X LEM CDMX"
+          }
+        ]
+      },
+      "fase2": {
+        "titulo": "Fase 2 - Documentos especificos",
+        "descripcion": "Bajo impacto no requiere constancias adicionales. Esta fase queda vacia.",
+        "pasos": []
+      },
+      "fase3": {
+        "titulo": "Fase 3 - Registro en SIAPEM",
+        "descripcion": "Registro del aviso de funcionamiento para establecimientos de bajo impacto a traves del Sistema de Apertura Rapida de Establecimientos Mercantiles (SIAPEM). Formato EM-03.",
+        "formato": "EM-03",
+        "tipo": "Aviso de Funcionamiento",
+        "costo": "Gratuito (sin pago de derechos)",
+        "plazo": "1-3 dias habiles (emision de acuse inmediata)",
+        "link": "https://siapem.cdmx.gob.mx/index.xhtml",
+        "advertencia_siapem": "El aviso no constituye autorizacion; el establecimiento debe cumplir con la normatividad vigente en materia de uso de suelo, proteccion civil y sanciones por incumplimiento.",
+        "pasos": [
+          {
+            "orden": 1,
+            "nombre": "Ingresar a SIAPEM con Llave CDMX",
+            "descripcion": "Acceder a siapem.cdmx.gob.mx con tu cuenta Llave CDMX y aceptar los terminos y condiciones."
+          },
+          {
+            "orden": 2,
+            "nombre": "Dar de alta el negocio",
+            "descripcion": "En 'Mis negocios' seleccionar 'Dar de alta nuevo negocio'. Capturar tipo de persona (Fisica/Moral), domicilio fiscal, datos del representante legal y datos del establecimiento."
+          },
+          {
+            "orden": 3,
+            "nombre": "Adjuntar CUS SEDUVI y PIPC (si aplica)",
+            "descripcion": "Cargar el CUS SEDUVI vigente (PDF) y, si tu local requiere, el PIPC registrado."
+          },
+          {
+            "orden": 4,
+            "nombre": "Registrar tramite formato EM-03",
+            "descripcion": "En 'Mis tramites' -> 'Registrar nuevo tramite', elegir el negocio y seleccionar el formato 'EM-03 funcionamiento de bajo impacto'. Confirmar la informacion."
+          },
+          {
+            "orden": 5,
+            "nombre": "Descargar acuse",
+            "descripcion": "Descargar e imprimir el Acuse de Aviso de Funcionamiento. Este documento ampara la operacion legal del establecimiento y debe mantenerse visible en el local."
+          }
+        ]
+      }
+    }
+  },
+  "vecinal": {
+    "impacto": "Impacto Vecinal",
+    "fundamento_principal": "Art. 19 LEM CDMX",
+    "formato_siapem": "EM-11",
+    "advertencia": "Giros de impacto vecinal (salones de fiesta, restaurantes con venta de alcohol, hoteles, cines, teatros, clubes privados) requieren EM-11 y pago de derechos. No requieren autorizacion expresa de la Alcaldia, pero si cumplimiento estricto de la normatividad.",
+    "fases": {
+      "fase0": {
+        "titulo": "Fase 0 - Preparacion",
+        "descripcion": "Acciones previas al tramite: constitucion fiscal, local, documentacion base.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Constituir RFC ante el SAT",
+            "descripcion": "Inscribirte en el RFC como persona fisica o moral con actividad empresarial en el giro que vas a operar. Para giros de impacto vecinal, es indispensable contar con regimen fiscal acorde (Servicio de alimentos, Hospedaje, Eventos, etc.).",
+            "link": "https://www.sat.gob.mx/tramites/16703/obten-tu-constancia-de-situacion-fiscal",
+            "link_info": "https://www.sat.gob.mx/personas/inscripcion-en-el-rfc",
+            "costo": "Gratuito",
+            "plazo": "1-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 CFF; Regla 2.4.1. RMF"
+          },
+          {
+            "paso": 2,
+            "nombre": "Firma de contrato de arrendamiento del local",
+            "descripcion": "Celebrar y registrar ante Tesoreria CDMX el contrato de arrendamiento del local comercial. Para impacto vecinal, validar que el contrato permita expresamente el giro de servicios de alimentos, bebidas alcoholicas o eventos segun corresponda.",
+            "link": "",
+            "link_info": "https://www.finanzas.cdmx.gob.mx/",
+            "costo": "Variable (renta + deposito)",
+            "plazo": "1-3 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Licencia de uso de suelo complementaria (en su caso)",
+            "descripcion": "Para giros con venta de alcohol en zonas de uso mixto, verificar requisitos adicionales del Programa Delegacional de Desarrollo Urbano (PDDU) y, en su caso, obtener dictamen de congruencia.",
+            "link": "https://www.seduvi.cdmx.gob.mx/",
+            "link_info": "https://www.seduvi.cdmx.gob.mx/programas",
+            "costo": "Variable (uma-based)",
+            "plazo": "5-10 dias habiles",
+            "obligatorio": false,
+            "condicion": "Zona de uso mixto con restriccion para bebidas alcoholicas",
+            "fundamento": "PDDU de la Alcaldia correspondiente"
+          }
+        ]
+      },
+      "fase1": {
+        "titulo": "Fase 1 - Prerrequisitos obligatorios",
+        "descripcion": "Tramites indispensables antes de registrar el aviso en SIAPEM.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Crear cuenta Llave CDMX",
+            "descripcion": "Crear tu identidad digital unica de la CDMX. Es obligatoria para acceder al SIAPEM, RETYS y todos los tramites electronicos del Gobierno de la Ciudad de Mexico.",
+            "link": "https://llave.cdmx.gob.mx/",
+            "link_info": "https://llave.cdmx.gob.mx/ayuda",
+            "costo": "Gratuito",
+            "plazo": "1 dia habil (alta inmediata)",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Decreto por el que se crea la Plataforma Llave CDMX"
+          },
+          {
+            "paso": 2,
+            "nombre": "Obtener Certificado Unico de Zonificacion de Uso de Suelo (CUS SEDUVI)",
+            "descripcion": "Solicitar el CUS vigente (maximo un ano de expedicion) que señale expresamente que el giro mercantil esta permitido en el domicilio del local. En este caso, debe incluir el rubro de servicios de alimentos/bebidas/hospedaje.",
+            "link": "http://certificadodigital.cdmx.gob.mx:8080/CertificadoDigital/certificado/solicitaCertificado",
+            "link_info": "https://www.cdmx.gob.mx/public/InformacionTramite.xhtml?idTramite=806",
+            "costo": "$2,078 MXN (uma-based)",
+            "plazo": "10-15 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Programa Interno de Proteccion Civil (PIPC)",
+            "descripcion": "Elaborar y registrar el Programa Interno de Proteccion Civil ante la Alcaldia correspondiente. Para impacto vecinal es CASI siempre obligatorio dado el aforo (restaurantes, salones, hoteles). Requiere visto bueno de Tercero Acreditado.",
+            "link": "https://www.proteccioncivil.cdmx.gob.mx/",
+            "link_info": "https://www.proteccioncivil.cdmx.gob.mx/programa-interno",
+            "costo": "$3,500 - $12,000 MXN (Tercer Acreditado) + $1,200 MXN (registro)",
+            "plazo": "10-20 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 10 apartado A fracc. X LEM CDMX"
+          }
+        ]
+      },
+      "fase2": {
+        "titulo": "Fase 2 - Documentos especificos",
+        "descripcion": "Constancias de no adeudo obligatorias para impacto vecinal.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Constancia de no adeudo de predial",
+            "descripcion": "Solicitar ante la Tesoreria de la CDMX la constancia que acredite que el inmueble donde operaras no tiene adeudos de predial. Se tramita en linea mediante el formato de Finanzas.",
+            "link": "https://data.finanzas.cdmx.gob.mx/formato_lc",
+            "link_info": "https://www.finanzas.cdmx.gob.mx/formatos",
+            "costo": "Gratuito",
+            "plazo": "3-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 LEM CDMX"
+          },
+          {
+            "paso": 2,
+            "nombre": "Constancia de no adeudo de agua (SACMEX)",
+            "descripcion": "Solicitar ante el Sistema de Aguas de la Ciudad de Mexico (SACMEX) la constancia de no adeudo por servicios hidraulicos del inmueble.",
+            "link": "https://data.finanzas.cdmx.gob.mx/formato_lc",
+            "link_info": "https://www.sacmex.cdmx.gob.mx/",
+            "costo": "Gratuito",
+            "plazo": "3-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Poliza de seguro de responsabilidad civil",
+            "descripcion": "Contratar poliza de seguro de responsabilidad civil que cubra danos a terceros en el establecimiento (especialmente para salones de fiesta, restaurantes con aforo alto, hoteles).",
+            "link": "https://www.gob.mx/cnsf",
+            "link_info": "https://www.gob.mx/cnsf/acciones-y-programas/seguro-de-responsabilidad-civil",
+            "costo": "$8,000 - $25,000 MXN anuales",
+            "plazo": "1-3 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 10 LEM CDMX; Reglas de caracter general CNSF"
+          }
+        ]
+      },
+      "fase3": {
+        "titulo": "Fase 3 - Registro en SIAPEM",
+        "descripcion": "Registro del aviso de funcionamiento para establecimientos de impacto vecinal a traves del SIAPEM. Formato EM-11. Requiere pago de derechos conforme al articulo 191 fracc. I del Codigo Fiscal CDMX.",
+        "formato": "EM-11",
+        "tipo": "Aviso de Funcionamiento",
+        "costo": "$3,000 - $8,000 MXN (Art. 191 fracc. I Codigo Fiscal CDMX)",
+        "plazo": "10-15 dias habiles",
+        "link": "https://siapem.cdmx.gob.mx/index.xhtml",
+        "advertencia_siapem": "El aviso de funcionamiento NO exime del cumplimiento de las disposiciones en materia de salud, seguridad, alcoholes y proteccion civil. La operacion puede suspenderse o revocarse si se incumplen las condiciones declaradas.",
+        "pasos": [
+          {
+            "orden": 1,
+            "nombre": "Ingresar a SIAPEM con Llave CDMX",
+            "descripcion": "Acceder a siapem.cdmx.gob.mx con tu cuenta Llave CDMX."
+          },
+          {
+            "orden": 2,
+            "nombre": "Dar de alta el negocio",
+            "descripcion": "En 'Mis negocios' -> 'Dar de alta nuevo negocio'. Capturar domicilio, datos fiscales, capacidad de aforo y giro especifico (restaurante, salon, hotel, etc.)."
+          },
+          {
+            "orden": 3,
+            "nombre": "Adjuntar CUS SEDUVI, PIPC y constancias",
+            "descripcion": "Cargar el CUS SEDUVI vigente, PIPC registrado, constancias de no adeudo de predial y agua, y poliza de responsabilidad civil (todos en PDF)."
+          },
+          {
+            "orden": 4,
+            "nombre": "Registrar tramite formato EM-11",
+            "descripcion": "En 'Mis tramites' -> 'Registrar nuevo tramite', elegir el negocio y seleccionar el formato 'EM-11 funcionamiento de impacto vecinal'. Confirmar."
+          },
+          {
+            "orden": 5,
+            "nombre": "Pago de derechos (linea de captura)",
+            "descripcion": "El sistema generara una linea de captura por concepto de derechos conforme al Art. 191 fracc. I del Codigo Fiscal CDMX. Pagar en bancos autorizados o en linea."
+          },
+          {
+            "orden": 6,
+            "nombre": "Descargar acuse y publicar en establecimiento",
+            "descripcion": "Una vez validado el pago, descargar el Acuse de Aviso EM-11. Imprimir y exhibir en lugar visible del establecimiento junto con el CUS SEDUVI y PIPC."
+          }
+        ]
+      }
+    }
+  },
+  "zonal": {
+    "impacto": "Impacto Zonal",
+    "fundamento_principal": "Art. 27 Bis LEM CDMX",
+    "formato_siapem": "EM-08",
+    "advertencia": "Giros de impacto zonal (bares, antros, casinos, cabarets, peñas, chelerías, centros de apuestas) requieren SOLICITUD DE PERMISO, NO aviso. Deben ser autorizados expresamente por la Alcaldia correspondiente. Distancia minima de 300m de escuelas. Pago de derechos conforme al Art. 191 fracc. II del Codigo Fiscal CDMX.",
+    "fases": {
+      "fase0": {
+        "titulo": "Fase 0 - Preparacion",
+        "descripcion": "Acciones previas al tramite: constitucion fiscal, local, validaciones adicionales.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Constituir RFC ante el SAT (regimen empresarial)",
+            "descripcion": "Inscribirte en el RFC con regimen fiscal acorde a la actividad (servicios de bebidas, entretenimiento nocturno, juegos y sorteos). Personas morales son altamente recomendables para este giro.",
+            "link": "https://www.sat.gob.mx/tramites/16703/obten-tu-constancia-de-situacion-fiscal",
+            "link_info": "https://www.sat.gob.mx/personas/inscripcion-en-el-rfc",
+            "costo": "Gratuito",
+            "plazo": "1-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 CFF; Regla 2.4.1. RMF"
+          },
+          {
+            "paso": 2,
+            "nombre": "Firma de contrato de arrendamiento con uso nocturno",
+            "descripcion": "Contrato de arrendamiento que permita expresamente operacion nocturna y giro de entretenimiento. Verificar que la copropiedad o condominio no prohiba este tipo de giros en sus reglamentos internos.",
+            "link": "",
+            "link_info": "https://www.finanzas.cdmx.gob.mx/",
+            "costo": "Variable (renta + deposito)",
+            "plazo": "1-3 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Verificar distancia minima de 300m de escuelas",
+            "descripcion": "Validar que el local se ubique a mas de 300 metros lineales de cualquier centro educativo (art. 27 Bis LEM CDMX). Esta verificacion es causa de negacion del permiso.",
+            "link": "https://www.seduvi.cdmx.gob.mx/",
+            "link_info": "https://www.seduvi.cdmx.gob.mx/servicios/certificado-de-zonificacion",
+            "costo": "Sin costo (validacion)",
+            "plazo": "Mismo dia",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 4,
+            "nombre": "Acta constitutiva de persona moral (recomendado)",
+            "descripcion": "Para bares, antros y casinos se recomienda ampliamente constituir una sociedad mercantil (SA de CV o SAS) para proteger el patrimonio personal y facilitar tramites ante Alcaldia.",
+            "link": "https://www.gob.mx/profeco/acciones-y-programas/constitucion-de-sociedades",
+            "link_info": "https://www.sat.gob.mx/consulta/41646/consulta-la-informacion-de-tu-sociedad-mercantil",
+            "costo": "$15,000 - $35,000 MXN (notario + registro)",
+            "plazo": "5-15 dias habiles",
+            "obligatorio": false,
+            "condicion": "Recomendado para limitar responsabilidad patrimonial",
+            "fundamento": "Codigo de Comercio; Ley General de Sociedades Mercantiles"
+          }
+        ]
+      },
+      "fase1": {
+        "titulo": "Fase 1 - Prerrequisitos obligatorios",
+        "descripcion": "Tramites indispensables antes de la solicitud de permiso.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Crear cuenta Llave CDMX",
+            "descripcion": "Crear tu identidad digital unica de la CDMX. Obligatoria para acceder al SIAPEM, RETYS y todos los tramites electronicos del Gobierno de la Ciudad de Mexico.",
+            "link": "https://llave.cdmx.gob.mx/",
+            "link_info": "https://llave.cdmx.gob.mx/ayuda",
+            "costo": "Gratuito",
+            "plazo": "1 dia habil (alta inmediata)",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Decreto por el que se crea la Plataforma Llave CDMX"
+          },
+          {
+            "paso": 2,
+            "nombre": "Certificado Unico de Zonificacion de Uso de Suelo (CUS SEDUVI)",
+            "descripcion": "CUS vigente que señale que el giro de impacto zonal esta permitido. Para giros de bebidas alcoholicas se requiere que el uso de suelo explicite la zona apta.",
+            "link": "http://certificadodigital.cdmx.gob.mx:8080/CertificadoDigital/certificado/solicitaCertificado",
+            "link_info": "https://www.cdmx.gob.mx/public/InformacionTramite.xhtml?idTramite=806",
+            "costo": "$2,078 MXN (uma-based)",
+            "plazo": "10-15 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Programa Interno de Proteccion Civil (PIPC) con analisis de riesgo",
+            "descripcion": "PIPC obligatorio y registrado ante la Alcaldia. Para impacto zonal se requiere analisis de riesgo por fenomeno perturbador (incendio, sismo, aglomeraciones) y visto bueno de Tercero Acreditado.",
+            "link": "https://www.proteccioncivil.cdmx.gob.mx/",
+            "link_info": "https://www.proteccioncivil.cdmx.gob.mx/programa-interno",
+            "costo": "$8,000 - $25,000 MXN (Tercer Acreditado) + $1,200 MXN (registro)",
+            "plazo": "15-30 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 10 apartado A fracc. X LEM CDMX"
+          }
+        ]
+      },
+      "fase2": {
+        "titulo": "Fase 2 - Documentos especificos",
+        "descripcion": "Constancias y documentos adicionales requeridos para impacto zonal.",
+        "pasos": [
+          {
+            "paso": 1,
+            "nombre": "Constancia de no adeudo de predial",
+            "descripcion": "Solicitar ante la Tesoreria de la CDMX la constancia que acredite que el inmueble no tiene adeudos de predial. Requisito indispensable para EM-08.",
+            "link": "https://data.finanzas.cdmx.gob.mx/formato_lc",
+            "link_info": "https://www.finanzas.cdmx.gob.mx/formatos",
+            "costo": "Gratuito",
+            "plazo": "3-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 y 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 2,
+            "nombre": "Constancia de no adeudo de agua (SACMEX)",
+            "descripcion": "Solicitar ante el Sistema de Aguas de la Ciudad de Mexico (SACMEX) la constancia de no adeudo por servicios hidraulicos del inmueble.",
+            "link": "https://data.finanzas.cdmx.gob.mx/formato_lc",
+            "link_info": "https://www.sacmex.cdmx.gob.mx/",
+            "costo": "Gratuito",
+            "plazo": "3-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 19 y 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 3,
+            "nombre": "Poliza de seguro de responsabilidad civil con cobertura amplia",
+            "descripcion": "Poliza de seguro de responsabilidad civil con cobertura minima de 5,000 UMAs por danos a terceros, lesiones, incendio y afectaciones por bebidas alcoholicas.",
+            "link": "https://www.gob.mx/cnsf",
+            "link_info": "https://www.gob.mx/cnsf/acciones-y-programas/seguro-de-responsabilidad-civil",
+            "costo": "$25,000 - $80,000 MXN anuales",
+            "plazo": "3-5 dias habiles",
+            "obligatorio": true,
+            "condicion": "",
+            "fundamento": "Art. 10 LEM CDMX; Art. 27 Bis LEM CDMX"
+          },
+          {
+            "paso": 4,
+            "nombre": "Licencia de funcionamiento de bebidas alcoholicas (en su caso)",
+            "descripcion": "Para venta, distribucion o consumo de bebidas alcoholicas, obtener Licencia de Funcionamiento para Bebidas Alcoholicas ante la Alcaldia. Es un tramite independiente y complementario al EM-08.",
+            "link": "https://www.finanzas.cdmx.gob.mx/formatos",
+            "link_info": "https://www.cdmx.gob.mx/public/InformacionTramite.xhtml",
+            "costo": "$40,000 - $250,000 MXN (uma-based)",
+            "plazo": "20-30 dias habiles",
+            "obligatorio": false,
+            "condicion": "Giros con venta o consumo de alcohol",
+            "fundamento": "Ley de Establecimientos Mercantiles CDMX; Codigo Fiscal CDMX"
+          },
+          {
+            "paso": 5,
+            "nombre": "Dictamen de impacto zonal (para casinos y centros de apuestas)",
+            "descripcion": "Para casinos, centros de apuestas y giros con juegos con apuestas/sorteos, obtener dictamen favorable de la Secretaria de Gobierno (SEGOB) y de la Loteria Nacional para uso de juegos y sorteos.",
+            "link": "https://www.gob.mx/segob",
+            "link_info": "https://www.gob.mx/segob/acciones-y-programas/juegos-y-sorteos",
+            "costo": "$50,000 - $150,000 MXN",
+            "plazo": "30-60 dias habiles",
+            "obligatorio": false,
+            "condicion": "Casinos, casas de apuesta, salas de sorteos",
+            "fundamento": "Ley Federal de Juegos y Sorteos"
+          }
+        ]
+      },
+      "fase3": {
+        "titulo": "Fase 3 - Solicitud de Permiso (SIAPEM)",
+        "descripcion": "Solicitud formal de permiso de funcionamiento para establecimientos de impacto zonal. Formato EM-08. A diferencia de los avisos, requiere AUTORIZACION EXPRESA de la Alcaldia correspondiente. Pago de derechos conforme al Art. 191 fracc. II del Codigo Fiscal CDMX.",
+        "formato": "EM-08",
+        "tipo": "Solicitud de Permiso",
+        "costo": "$25,000 - $90,000 MXN (Art. 191 fracc. II Codigo Fiscal CDMX)",
+        "plazo": "45-75 dias habiles",
+        "link": "https://siapem.cdmx.gob.mx/index.xhtml",
+        "advertencia_siapem": "La operacion sin autorizacion expresa de la Alcaldia es INFRACCION GRAVE que puede derivar en clausura definitiva y multa. El permiso ES PERSONAL e INTRANSFERIBLE; cualquier cambio de domicilio, giro o titular requiere nuevo tramite. Verifica el cumplimiento de distancia minima a escuelas (300m) y los reglamentos del condominio donde operaras.",
+        "pasos": [
+          {
+            "orden": 1,
+            "nombre": "Ingresar a SIAPEM con Llave CDMX",
+            "descripcion": "Acceder a siapem.cdmx.gob.mx con tu cuenta Llave CDMX y firmar la declaracion bajo protesta de decir verdad."
+          },
+          {
+            "orden": 2,
+            "nombre": "Dar de alta el negocio (persona moral recomendada)",
+            "descripcion": "En 'Mis negocios' -> 'Dar de alta nuevo negocio'. Capturar tipo de persona (fisica/moral), datos del representante legal, RFC, domicilio y datos especificos del local (aforo, capacidad, horario proyectado)."
+          },
+          {
+            "orden": 3,
+            "nombre": "Adjuntar CUS SEDUVI, PIPC, constancias y polizas",
+            "descripcion": "Cargar en PDF: CUS SEDUVI vigente, PIPC registrado con analisis de riesgo, constancias de no adeudo predial y agua, poliza de responsabilidad civil vigente, y (en su caso) licencia de alcoholicos y dictamen de SEGOB/Loteria Nacional."
+          },
+          {
+            "orden": 4,
+            "nombre": "Registrar tramite formato EM-08",
+            "descripcion": "En 'Mis tramites' -> 'Registrar nuevo tramite', elegir el negocio y seleccionar el formato 'EM-08 Solicitud de Permiso para Impacto Zonal'. Completar la declaracion bajo protesta."
+          },
+          {
+            "orden": 5,
+            "nombre": "Pago de derechos (linea de captura)",
+            "descripcion": "El sistema genera linea de captura por derechos conforme al Art. 191 fracc. II del Codigo Fiscal CDMX. Pagar en bancos autorizados (Banamex, BBVA, HSBC, etc.) o en linea."
+          },
+          {
+            "orden": 6,
+            "nombre": "Espera de autorizacion expresa de la Alcaldia",
+            "descripcion": "Una vez pagado, la Alcaldia correspondiente tiene un plazo de hasta 45 dias habiles para emitir RESOLUCION (autorizacion o negativa). La Alcaldia podra realizar visitas de verificacion al local."
+          },
+          {
+            "orden": 7,
+            "nombre": "Descargar resolucion y exhibir en establecimiento",
+            "descripcion": "Una vez autorizada, descargar la Resolucion de Permiso EM-08. Imprimir y exhibir en lugar visible del establecimiento junto con CUS SEDUVI, PIPC, polizas y (en su caso) licencia de alcoholicos."
+          }
+        ]
+      }
+    }
+  }
+}
