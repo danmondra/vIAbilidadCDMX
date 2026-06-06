@@ -22,59 +22,66 @@ def _add_column_if_not_exists(cur, table, col, col_type):
 
 
 def seed_giros(cur):
-    path = DATA_DIR / "giros.json"
-    if not path.exists():
-        print("  [SKIP] giros.json no encontrado")
-        return
-
     _add_column_if_not_exists(cur, "giros", "articulo_lem", "TEXT")
     _add_column_if_not_exists(cur, "giros", "formato_siapem", "TEXT")
     _add_column_if_not_exists(cur, "giros", "keywords", "TEXT")
     _add_column_if_not_exists(cur, "giros", "nombre_corto", "TEXT")
 
-    with open(path, encoding="utf-8") as f:
-        giros = json.load(f)
+    path = DATA_DIR / "giros.json"
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            giros = json.load(f)
 
-    count = 0
-    for g in giros:
-        scian = str(g.get("scian", ""))
-        cur.execute(
-            """UPDATE giros SET
-                articulo_lem = ?,
-                formato_siapem = ?,
-                keywords = ?,
-                nombre_corto = ?
-            WHERE CAST(clave_scian AS TEXT) = ?""",
-            (
-                g.get("articulo_lem"),
-                g.get("formato_siapem"),
-                json.dumps(g.get("keywords", []), ensure_ascii=False),
-                g.get("nombre"),
-                scian,
-            ),
-        )
-        if cur.rowcount > 0:
-            count += cur.rowcount
-        else:
+        count = 0
+        for g in giros:
+            scian = str(g.get("scian", ""))
             cur.execute(
-                """INSERT OR IGNORE INTO giros
-                   (clave_scian, descripción, tipo_de_impacto, horario_de_operación,
-                    articulo_lem, formato_siapem, keywords, nombre_corto)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                """UPDATE giros SET
+                    articulo_lem = ?,
+                    formato_siapem = ?,
+                    keywords = ?,
+                    nombre_corto = ?
+                WHERE CAST(clave_scian AS TEXT) = ?""",
                 (
-                    int(scian) if scian.isdigit() else 0,
-                    g.get("descripcion", g.get("nombre", "")),
-                    g.get("impacto", ""),
-                    "PERMANENTE",
                     g.get("articulo_lem"),
                     g.get("formato_siapem"),
                     json.dumps(g.get("keywords", []), ensure_ascii=False),
                     g.get("nombre"),
+                    scian,
                 ),
             )
-            count += cur.rowcount
+            if cur.rowcount > 0:
+                count += cur.rowcount
+            else:
+                cur.execute(
+                    """INSERT OR IGNORE INTO giros
+                       (clave_scian, descripción, tipo_de_impacto, horario_de_operación,
+                        articulo_lem, formato_siapem, keywords, nombre_corto)
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                    (
+                        int(scian) if scian.isdigit() else 0,
+                        g.get("descripcion", g.get("nombre", "")),
+                        g.get("impacto", ""),
+                        "PERMANENTE",
+                        g.get("articulo_lem"),
+                        g.get("formato_siapem"),
+                        json.dumps(g.get("keywords", []), ensure_ascii=False),
+                        g.get("nombre"),
+                    ),
+                )
+                count += cur.rowcount
 
-    print(f"  [OK] giros: {count} filas actualizadas/insertadas")
+        print(f"  [OK] giros: {count} filas actualizadas/insertadas desde giros.json")
+    else:
+        cur.execute("UPDATE giros SET nombre_corto = clasificación WHERE nombre_corto IS NULL")
+        cur.execute("UPDATE giros SET formato_siapem = 'EM-03' WHERE tipo_de_impacto LIKE '%Bajo%' AND formato_siapem IS NULL")
+        cur.execute("UPDATE giros SET formato_siapem = 'EM-11' WHERE tipo_de_impacto LIKE '%Vecinal%' AND formato_siapem IS NULL")
+        cur.execute("UPDATE giros SET formato_siapem = 'EM-08' WHERE tipo_de_impacto LIKE '%Zonal%' AND formato_siapem IS NULL")
+        cur.execute("UPDATE giros SET articulo_lem = 'Art. 35 LEM' WHERE tipo_de_impacto LIKE '%Bajo%' AND articulo_lem IS NULL")
+        cur.execute("UPDATE giros SET articulo_lem = 'Art. 19 LEM' WHERE tipo_de_impacto LIKE '%Vecinal%' AND articulo_lem IS NULL")
+        cur.execute("UPDATE giros SET articulo_lem = 'Art. 27 Bis LEM' WHERE tipo_de_impacto LIKE '%Zonal%' AND articulo_lem IS NULL")
+        cur.execute("UPDATE giros SET keywords = '[]' WHERE keywords IS NULL")
+        print("  [OK] giros: columnas añadidas y pobladas desde datos existentes (giros.json no encontrado)")
 
 
 def seed_tramites(cur):
