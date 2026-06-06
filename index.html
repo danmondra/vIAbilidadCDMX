@@ -245,7 +245,7 @@
                 <li class="nav-item"><a class="nav-link" href="#analisis">Análisis</a></li>
                 <li class="nav-item"><a class="nav-link" href="#tramites">Trámites</a></li>
                 <li class="nav-item"><a class="nav-link" href="#recomendaciones">Recomendaciones</a></li>
-                <li class="nav-item"><a class="btn btn-outline-sedeco ms-2 px-3 py-1" href="https://wa.me/525598765432?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20viabilidad%20de%20negocios" target="_blank">Contacto</a></li>
+                <li class="nav-item"><a class="btn btn-outline-sedeco ms-2 px-3 py-1" href="https://t.me/vIAbilibot" target="_blank">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -260,15 +260,15 @@
                 <h1 class="mt-2">¿Tu negocio es viable en la CDMX?</h1>
                 <p class="lead mt-3 opacity-75">Analiza uso de suelo, afluencia, competencia, trámites RETYS y obtén una ruta clara para abrir tu negocio sin riesgos.</p>
                 <div class="mt-4">
-                    <button class="btn btn-light text-dark fw-semibold me-2" onclick="simularAnalisis()"><i class="bi bi-magic"></i> Simular análisis rápido</button>
+                    <button class="btn btn-light text-dark fw-semibold me-2" onclick="ejecutarAnalisis()"><i class="bi bi-magic"></i> Analizar con datos de ejemplo</button>
                     <a href="#tramites" class="btn btn-outline-light"><i class="bi bi-file-text"></i> Revisar trámites</a>
                 </div>
             </div>
             <div class="col-lg-5 text-center mt-4 mt-lg-0">
                 <div class="bg-white p-3 rounded-4 shadow d-inline-block">
                     <i class="bi bi-shop fs-1" style="color: var(--vino);"></i>
-                    <p class="mb-0 fw-bold mt-2">+12,000 negocios asesorados</p>
-                    <small>en 2025</small>
+                    <p class="mb-0 fw-bold mt-2">Análisis basado en datos reales</p>
+                    <small>DENUE INEGI + SEDUVI + LEM CDMX</small>
                 </div>
             </div>
         </div>
@@ -426,12 +426,7 @@
                     <i class="bi bi-lightbulb"></i> Recomendaciones SEDECO personalizadas
                 </div>
                 <div class="card-body" id="recomendacionesList">
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-check-lg text-success"></i> ✅ Alta afluencia en Polanco, ideal para cafetería de especialidad.</li>
-                        <li class="mb-2"><i class="bi bi-check-lg text-success"></i> 📊 Competencia moderada, diferencia con propuesta de valor única.</li>
-                        <li class="mb-2"><i class="bi bi-check-lg text-success"></i> 🎓 Acceso al programa “Impulso CDMX” con capital semilla de hasta $150k MXN.</li>
-                        <li class="mb-2"><i class="bi bi-check-lg text-success"></i> 🏛️ Uso de suelo compatible, acude a ventanilla única para acelerar licencias.</li>
-                    </ul>
+                    <p class="text-muted mb-0">Selecciona un giro y ubicación, luego presiona "Analizar viabilidad" para ver recomendaciones personalizadas.</p>
                 </div>
             </div>
         </div>
@@ -484,11 +479,11 @@
             </div>
             <div class="col-md-3">
                 <strong>Legal</strong><br>
-                <span class="text-white-50">Ley de Establecimientos Mercantiles para la CDMX · Reglamento 2025</span>
+                <span class="text-white-50">Ley de Establecimientos Mercantiles para la CDMX · Reglamento vigente</span>
             </div>
         </div>
         <hr class="bg-secondary">
-        <div class="text-center">© 2025 Gobierno de la Ciudad de México - SEDECO. Hackathon NVIDIA - Viabilidad de Negocios</div>
+        <div class="text-center">© 2026 Gobierno de la Ciudad de México - SEDECO. Hackathon SEDECO + Saptiva AI - Viabilidad de Negocios</div>
     </div>
 </footer>
 
@@ -707,10 +702,6 @@
                 scales: { r: { beginAtZero: true, max: 100 } }
             }
         });
-    }
-
-    function simularAnalisis() {
-        ejecutarAnalisis();
     }
 
     async function init() {
